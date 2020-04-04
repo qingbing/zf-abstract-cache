@@ -20,7 +20,7 @@ use Zf\Helper\Object;
  * Class ACacheTest
  * @package Test\Web
  */
-class ACacheTest extends Tester
+class ACacheTester extends Tester
 {
     /**
      * @describe    执行函数
