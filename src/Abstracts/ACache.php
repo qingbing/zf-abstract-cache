@@ -174,7 +174,7 @@ abstract class ACache extends Component implements CacheInterface
     /**
      * @describe    删除缓存值
      *
-     * @param string $key
+     * @param mixed $key
      *
      * @return bool
      */
