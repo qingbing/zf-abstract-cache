@@ -4,7 +4,7 @@
 # 简介
 - 该library提供缓存的抽象
 - 该缓存实现了 psr/simple 缓存的 "\Psr\SimpleCache\CacheInterface" 接口
-- 提供了不支持多缓存组件的多缓存处理代码块 "\Zf\Cache\Traits\TMultiCache"
+- 提供了支持多缓存组件的多缓存处理代码块 "\Zf\Cache\Traits\TMultiCache"
 - 缓存组件必须实现抽象类中对应的抽象方法，参考 "\Test\Debug\CacheDemo"
 
 # 使用范例
