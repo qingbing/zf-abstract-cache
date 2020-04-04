@@ -245,6 +245,7 @@ abstract class ACache extends Component implements CacheInterface
         foreach ($values as $key => $value) {
             $ks[$this->buildId($key)] = $this->encodeSaveValue($value);
         }
+        $ttl = (null === $ttl) ? $this->getTtl() : $ttl;
         return $this->setMultiValue($ks, $ttl);
     }
 
