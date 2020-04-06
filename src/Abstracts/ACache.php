@@ -321,12 +321,12 @@ abstract class ACache extends Component implements CacheInterface
      * @describe    设置缓存id的信息
      *
      * @param string $id
-     * @param string $value
+     * @param mixed $value
      * @param int $ttl
      *
      * @return bool
      */
-    abstract protected function setValue(string $id, string $value, $ttl): bool;
+    abstract protected function setValue(string $id, $value, $ttl): bool;
 
     /**
      * @describe    删除缓存信息
