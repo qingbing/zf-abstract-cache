@@ -111,13 +111,13 @@ abstract class ACache extends Component implements CacheInterface
     }
 
     /**
-     * @describe    编码需要存储的数据信息
+     * @describe    编码需要存储的数据信息，memcache支持数组存储
      *
      * @param mixed $value
      *
-     * @return string
+     * @return mixed
      */
-    protected function encodeSaveValue($value): string
+    protected function encodeSaveValue($value)
     {
         return $this->getEncrypt() ? CryptSecure::encode($value) : serialize($value);
     }
@@ -125,11 +125,11 @@ abstract class ACache extends Component implements CacheInterface
     /**
      * @describe    解码读取的数据信息
      *
-     * @param string $saveValue
+     * @param mixed $saveValue
      *
      * @return mixed
      */
-    protected function decodeSaveValue(string $saveValue)
+    protected function decodeSaveValue($saveValue)
     {
         return $this->getEncrypt() ? CryptSecure::decode($saveValue) : unserialize($saveValue);
     }
