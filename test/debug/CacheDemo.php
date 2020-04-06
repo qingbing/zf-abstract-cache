@@ -72,7 +72,7 @@ class CacheDemo extends ACache
      *
      * @return bool
      */
-    protected function setValue(string $id, string $value, $ttl): bool
+    protected function setValue(string $id, $value, $ttl): bool
     {
         $this->_data[$this->namespace][$id] = [$value, time() + $ttl];
         return true;
